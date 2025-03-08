@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employment Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { text-align: center; }
+        .chart-container { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>2021 U.S. Employment Dashboard</h1>
+    <div class="chart-container">
+        {{ bar_chart | safe }}
+    </div>
+    <div class="chart-container">
+        {{ pie_chart | safe }}
+    </div>
+</body>
+</html>
