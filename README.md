@@ -1,22 +1,29 @@
-# Employment Dashboard
-An interactive web dashboard visualizing U.S. employment data from the 2021 County Business Patterns.
+# U.S. Employment Insights Dashboard (2021)
 
-## Overview
-- **Objective**: Explore establishment counts and payroll by employment size and legal form.
-- **Data**: U.S. Census Bureau County Business Patterns (2021).
-- **Tools**: Python, Flask, pandas, Plotly.
+This project provides an interactive dashboard to explore U.S. employment data for the year 2021, sourced from the County Business Patterns (CBP) dataset. The dashboard visualizes key metrics such as the number of establishments, number of employees, and annual payroll, broken down by employment size and legal form of organization (LFO).
 
 ## Features
-- Bar chart: Number of establishments by employment size.
-- Pie chart: Annual payroll distribution by legal form.
 
-## Setup
-1. Clone the repo: `git clone https://github.com/yourusername/employment-dashboard`
-2. Install dependencies: `pip install flask pandas plotly`
-3. Run the app: `python app.py`
-4. Visit `http://127.0.0.1:5000` in your browser.
+- **Visualizations**:
+  - **Establishments by Employment Size**: A bar chart showing the number of establishments across different employment size categories (e.g., "<5", "5-9", ..., "1,000+").
+  - **Payroll Distribution by Legal Form**: A pie chart displaying the distribution of annual payroll across different legal forms (e.g., C-Corporations, S-Corporations).
+  - **Employees by Employment Size**: A bar chart illustrating the number of employees in each employment size category.
+  - **Establishments by Legal Form**: A pie chart showing the distribution of establishments by legal form.
+  - **Payroll by Employment Size and Legal Form**: A stacked bar chart detailing annual payroll across employment sizes, segmented by legal form.
 
-## Files
-- `app.py`: Flask application.
-- `templates/index.html`: HTML template for the dashboard.
-- `cbp_2021.csv`: Dataset (source: U.S. Census Bureau).
+- **Data Adjustments**:
+  - Excludes the "All establishments" category from bar and stacked bar charts to focus on specific size ranges.
+  - Converts payroll data from thousands of dollars to actual dollars for clarity (e.g., "Annual Payroll ($)" instead of "Annual Payroll ($1,000)").
+  - Uses shortened labels for better readability (e.g., "C-Corporations" instead of "C-corporations and other corporate legal forms of organization").
+  - Fixes Y-axis ordering in bar charts to ensure values increase from bottom to top with proportional spacing.
+
+- **Styling**:
+  - Uses the `plotly_white` template for a light background, improving readability.
+  - Ensures high-contrast text (black) for titles, labels, and legends.
+
+## Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
